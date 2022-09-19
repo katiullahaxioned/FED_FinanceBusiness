@@ -82,14 +82,35 @@ sub { bottom: -.25em; }
 .cf { *zoom: 1; }
 
 /*for all*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-green: #a4c63a;
+  --clr-grey1: #f7f7f7;
+  --clr-grey2: #777;
+  --clr-grey3: #555;
+  --clr-grey4: #343434;
+  --clr-grey5: #232323;
+}
+
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 a { 
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
+  transition: all .3s; 
 }
 
 li {
@@ -97,19 +118,91 @@ li {
   list-style-type: none;
 }
 
+span { display: inline-block; }
+
+input[type],
+textarea {
+  outline: none;
+}
+
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
+  max-width: 1366px;
+  width: 90%; 
   margin: 0 auto;
 }
 /*=================================
   Header styling starts here
 =================================*/
 
+/* header-top section starts here */
 
+.header-top .wrapper {
+  width: 100%;
+  padding: 0 4.75%;
+  display: flex;
+  align-items: center;
+  background-color: #a4c63a;
+  justify-content: space-between;
+}
 
+.header-time-contact { margin-left: 3px; }
 
+.header-top a,
+.header-time span {
+  padding: 15px 22px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.header-time span,
+.header-contact a {
+  border-left: 1px solid #f7f7f7;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.header-time span::before,
+.header-contact a::before {
+  margin-right: 11px;
+  font-family: 'fontAwesome';
+  font-size: 19px;
+  text-indent: 0;
+}
+
+.header-time span::before { content: '\f017'; }
+.header-contact a::before { content: '\f095'; }
+
+.header-social a {
+  width: 47px;
+  height: 50px;
+  border-left: 1px solid #f7f7f7;
+  position: relative;
+  font-size: 18px;
+  text-indent: -99999px;
+}
+
+.header-contact a,
+.header-social li:last-child a {
+  border-right: 1px solid #f7f7f7;
+}
+
+.header-social a::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+}
+
+.header-social li:nth-child(1) a::before { content: '\f09a'; }
+.header-social li:nth-child(2) a::before { content: '\f099'; }
+.header-social li:nth-child(3) a::before { content: '\f0e1'; }
+.header-social li:nth-child(4) a::before { content: '\f1b4'; }
+
+/* header-top section ends here */
 
 
 /*=================================
