@@ -164,6 +164,7 @@ html.active { overflow: hidden; }
   color: #000;
   font-size: 40px;
   font-weight: 600;
+  line-height: 1.1;
 }
 
 .section-heading span:last-child { color: #a4c63a; }
@@ -173,6 +174,7 @@ html.active { overflow: hidden; }
 .section-sub-heading {
   color: #777;
   font-size: 17px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
@@ -533,15 +535,13 @@ header { position: relative; }
 /* financial-services section styling starts here */
 
 .financial-services .wrapper {
-  padding: 160px 0 190px;
+  padding: 156px 0 190px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.financial-services .section-heading {
-  margin-bottom: 13px;
-}
+.financial-services .section-heading { margin-bottom: 11px; }
 
 .services-cards {
   margin-top: 81px;
@@ -622,6 +622,61 @@ header { position: relative; }
 .display-block { display: block; }
 
 /* modal section styling ends here */
+
+/* business-growth section styling starts here */
+
+.business-growth .wrapper {
+  width: 100%;
+  padding: 114px 5% 115px;
+  display: flex;
+  align-items: center;
+  background: url('../images/fun-facts-bg.jpg') no-repeat center;
+  background-size: cover;
+  justify-content: space-between;
+}
+
+.business-growth-left {
+  display: flex;
+  flex-basis: 45%;
+  flex-direction: column;
+}
+
+.business-growth-left .section-sub-heading,
+.business-growth-left .section-heading {
+  color: #fff;
+}
+
+.business-growth-left .section-heading { margin: 8px 0 27px; }
+.business-growth-left .section-para { margin: 17px 0; }
+.business-growth-left .more-button { margin-top: 28px; }
+
+.business-growth-counter {
+  display: flex;
+  flex-basis: 48.7%;
+  flex-wrap: wrap;
+  gap: 34px;
+}
+
+.business-growth-counter li {
+  padding: 28px 0 40px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255,255,255,.15);
+  flex: 1 0 40%;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+}
+
+.business-growth-counter .card-title { color: #fff; }
+
+.business-growth-counter .counter-num {
+  color: #a4c63a;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* business-growth section styling ends here */
 
 /* index.html : home-banner section styling ends here */
 
