@@ -661,7 +661,7 @@ header { position: relative; }
   padding: 28px 0 40px;
   display: flex;
   align-items: center;
-  background-color: rgba(255,255,255,.15);
+  background-color: rgba(255,255,255,.1);
   flex: 1 0 40%;
   flex-direction: column;
   gap: 5px;
@@ -677,6 +677,46 @@ header { position: relative; }
 }
 
 /* business-growth section styling ends here */
+
+/* our-company section styling starts here */
+
+.our-company .wrapper {
+  padding: 190px 0 154px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.our-company-figure {
+  flex: 1 0 48.7%;
+}
+
+.our-company-figure img {
+  object-fit: cover;
+}
+
+.our-company-right {
+  padding: 52px 32px 50px 64px;
+  display: flex;
+  background-color: #f7f7f7;
+  flex: 1 0 51.3%;
+  flex-direction: column;
+}
+
+.our-company-right .section-para {
+  color: #777;
+  word-spacing: 0;
+}
+
+.our-company .section-heading { margin: 8px 0 23px; }
+.our-company .section-para { margin: 17px 0; }
+.our-company .more-button { margin-top: 16px; }
+
+.our-company-right .more-button a:hover {
+  box-shadow: inset 0 0 0 2px #a4c63a;
+}
+
+/* our-company section styling ends here */
 
 /* index.html : home-banner section styling ends here */
 
