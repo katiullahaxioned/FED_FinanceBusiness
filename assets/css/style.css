@@ -872,6 +872,25 @@ header { position: relative; }
 
 /* call-back section styling ends here */
 
+/* client section styling starts here */
+
+.client .wrapper {
+  width: 100%;
+  padding: 66px 9% 91px;
+  background-color: #f7f7f7;
+}
+
+.client .logo-text-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.logo-text-list li { width: 174px; }
+
+/* client section styling ends here */
+
 /* index.html : home-banner section styling ends here */
 
 /*=================================
