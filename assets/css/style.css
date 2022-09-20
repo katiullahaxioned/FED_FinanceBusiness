@@ -122,6 +122,7 @@ span { display: inline-block; }
 
 input[type],
 textarea {
+  border: none;
   outline: none;
 }
 
@@ -768,6 +769,108 @@ header { position: relative; }
 }
 
 /* about-us section styling ends here */
+
+/* call-back section styling starts here */
+
+.call-back .wrapper {
+  padding: 156px 0 154px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.call-back .section-sub-heading {
+  margin: 13px 0 84px;
+  font-size: 16px;
+  word-spacing: 2px;
+}
+
+.call-back form {
+  width: 100%;
+  padding: 65px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  background-color: #a4c63a;
+  flex-wrap: wrap;
+  gap: 13px;
+  justify-content: center;
+}
+
+::placeholder {
+  color: #999;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.call-back form > * {
+  flex: 1 0 100%;
+}
+
+.call-back .form-top {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  justify-content: center;
+}
+
+.call-back .form-top > * {
+  flex-basis: 33.33%;
+}
+
+.call-back .input-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 40px;
+  color: #000;
+  font-size: 15px;
+}
+
+.error-alert {
+  color: #eb2f06;
+  font-size: 13px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.error-alert::before { content: '* '; }
+
+.visibility {
+  opacity: 1;
+  visibility: visible;
+}
+
+.input-textarea textarea {
+  width: 100%;
+  min-height: 133px;
+  padding: 18px;
+  border-radius: 25px;
+  color: #000;
+  resize: vertical;
+}
+
+.call-back .input-control { text-align: center; }
+
+.call-back .input-control input {
+  padding: 13px 28px;
+  border: 2px solid #fff;
+  border-radius: 35px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all .3s;
+}
+
+.call-back .input-control input:hover {
+  background-color: #fff;
+  color: #a4c63a;
+}
+
+/* call-back section styling ends here */
 
 /* index.html : home-banner section styling ends here */
 
