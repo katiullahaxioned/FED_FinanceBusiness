@@ -718,6 +718,57 @@ header { position: relative; }
 
 /* our-company section styling ends here */
 
+/* about-us section styling starts here */
+
+.about-us .wrapper {
+  width: 100%;
+  padding: 153px 5% 206px;
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-us .section-sub-heading { margin: 14px 0 82px; }
+
+.about-us-testimonials {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  justify-content: center;
+}
+
+.about-us-testimonials li {
+  padding: 33px 36px;
+  border-radius: 5px;
+  flex-basis: 50%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about-us-testimonials .card-title {
+  font-size: 21px;
+  font-weight: 700;
+  word-spacing: 2px;
+}
+
+.about-us-testimonials .client-position {
+  margin: 6px 0 4px;
+  color: #a4c63a;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.about-us-testimonials .section-para {
+  color: #777;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* about-us section styling ends here */
+
 /* index.html : home-banner section styling ends here */
 
 /*=================================
