@@ -130,6 +130,41 @@ p::first-letter { text-transform: uppercase; }
 
 html.active { overflow: hidden; }
 
+/* common styling starts here */
+
+/* .card-title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  word-spacing: 1px;
+} */
+
+.section-para {
+  color: #fff;
+  font-weight: 300;
+  word-spacing: 1px;
+  font-weight: 500;
+}
+
+.more-button a {
+  padding: 13px 34px;
+  border-radius: 35px;
+  background-color: #a4c63a;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.more-button a:hover {
+  background-color: #fff;
+  color: #a4c63a;
+}
+
+/* common styling ends here */
+
 /*for wrapper*/
 .wrapper {
   max-width: 1366px;
@@ -142,18 +177,13 @@ html.active { overflow: hidden; }
 
 /* header-top section starts here */
 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 5;
-}
+header { position: relative; }
 
 .header-top .wrapper {
   width: 100%;
   padding: 0 4.7%;
   display: flex;
+  position: relative;
   align-items: center;
   background-color: #a4c63a;
   justify-content: space-between;
@@ -234,6 +264,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+  top: 100%;
+  z-index: 5;
 }
 
 .header-bottom .logo {
@@ -328,12 +361,13 @@ header {
 
 /* index.html : home-banner section styling starts here */
 
+/* home-banner section styling starts here */
+
 .home-banner .wrapper {
   width: 100%;
   height: 105vh;
   overflow: hidden;
   position: relative;
-  top: 51px;
 }
 
 .banner-slider {
@@ -372,8 +406,8 @@ header {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 1px;
-  word-spacing: 1px;
   text-transform: uppercase;
+  word-spacing: 1px;
 }
 
 .banner-heading {
@@ -453,6 +487,36 @@ header {
 }
 
 .banner-slider-control .control:hover::before { border-color: #a4c63a; }
+
+/* home-banner section styling ends here */
+
+/* callback-now section styling starts here */
+
+.callback-now .wrapper {
+  width: 100%;
+  padding: 40px 5%;
+  display: flex;
+  align-items: center;
+  background-color: #a4c63a;
+  justify-content: space-between;
+}
+
+.callback-now .card-title {
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.callback-now .card-title::first-letter { text-transform: uppercase; }
+
+.callback-now .more-button a {
+  padding: 11px 32px;
+  border: 2px solid #fff;
+  margin-top: 9px;
+}
+
+/* callback-now section styling ends here */
 
 /* index.html : home-banner section styling ends here */
 
