@@ -132,20 +132,17 @@ html.active { overflow: hidden; }
 
 /* common styling starts here */
 
-/* .card-title {
+.card-title {
   color: #000;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 23px;
+  font-weight: 600;
   text-transform: capitalize;
-  word-spacing: 1px;
-} */
+}
 
 .section-para {
   color: #fff;
-  font-weight: 300;
-  word-spacing: 1px;
-  font-weight: 500;
+  font-weight: 400;
+  word-spacing: normal;
 }
 
 .more-button a {
@@ -161,6 +158,22 @@ html.active { overflow: hidden; }
 .more-button a:hover {
   background-color: #fff;
   color: #a4c63a;
+}
+
+.section-heading {
+  color: #000;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.section-heading span:last-child { color: #a4c63a; }
+
+.section-heading span:first-child::first-letter { text-transform: uppercase; }
+
+.section-sub-heading {
+  color: #777;
+  font-size: 17px;
+  text-transform: uppercase;
 }
 
 /* common styling ends here */
@@ -421,11 +434,10 @@ header { position: relative; }
   text-transform: uppercase;
 }
 
-.section-para {
+.banner-slider .section-para {
   color: #fff;
-  font-weight: 300;
-  word-spacing: 1px;
   font-weight: 500;
+  word-spacing: 1px;
 }
 
 .banner-slider .section-para { margin: 0 0 46px 0; }
@@ -505,7 +517,7 @@ header { position: relative; }
   margin-bottom: 5px;
   color: #fff;
   font-size: 24px;
-  font-weight: 600;
+  text-transform: none;
 }
 
 .callback-now .card-title::first-letter { text-transform: uppercase; }
@@ -517,6 +529,47 @@ header { position: relative; }
 }
 
 /* callback-now section styling ends here */
+
+/* financial-services section styling starts here */
+
+.financial-services .wrapper {
+  padding: 160px 0 190px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.financial-services .section-heading {
+  margin-bottom: 13px;
+}
+
+.services-cards {
+  margin-top: 81px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+} 
+
+.services-card-content {
+  padding: 29px 22px 32px 32px;
+  background-color: #f7f7f7;
+}
+
+.services-card-content .section-para {
+  margin: 15px 0 20px;
+  color: #777;
+}
+
+.financial-services .section-heading span {
+  text-transform: capitalize;
+}
+
+.services-card-content .more-button a:hover {
+  box-shadow: inset 0 0 0 2px #a4c63a;
+}
+
+/* financial-services section styling ends here */
 
 /* index.html : home-banner section styling ends here */
 
