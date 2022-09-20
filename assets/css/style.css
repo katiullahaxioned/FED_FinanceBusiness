@@ -279,7 +279,7 @@ header { position: relative; }
   justify-content: space-between;
   position: absolute;
   top: 100%;
-  z-index: 5;
+  z-index: 3;
 }
 
 .header-bottom .logo {
@@ -570,6 +570,58 @@ header { position: relative; }
 }
 
 /* financial-services section styling ends here */
+
+/* modal section styling starts here */
+
+.modal {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-box {
+  width: 30%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+.modal-close-button {
+  width: 35px;
+  height: 35px;
+  display: none;
+  position: fixed;
+  top: 15px;
+  right: 1.5%;
+  z-index: 10;
+  color: #a4c63a;
+  cursor: pointer;
+  font-size: 35px;
+  text-indent: -99999px;
+  transition: all .3s;
+}
+
+.modal-close-button::before {
+  content: '\f00d';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+}
+
+.modal-close-button:hover { opacity: 0.7; }
+.display-block { display: block; }
+
+/* modal section styling ends here */
 
 /* index.html : home-banner section styling ends here */
 
