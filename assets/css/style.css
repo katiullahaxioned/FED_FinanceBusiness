@@ -971,6 +971,92 @@ header { position: relative; }
 
 /* services-banner section styling ends here */
 
+/* business-analysis section styling starts here */
+
+.business-analysis .wrapper {
+  width: 100%;
+  padding: 153px 5% 119px;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  gap: 66px;
+}
+
+.business-analysis-list {
+  display: flex;
+  align-items: center;
+  flex-basis: 31.5%;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.business-analysis-list li {
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  background-color: #a4c63a;
+  cursor: pointer;
+  justify-content: space-between;
+  transition: all .3s;
+}
+
+.business-analysis-list .card-title {
+  color: #232323;
+}
+
+.business-analysis-list .icon-right {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  color: #232323;
+  font-size: 20px;
+  text-indent: -99999px;
+  transition: all .3s;
+}
+
+.business-analysis-list .icon-right::before {
+  content: '\f105';
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  transform: translateY(-50%);
+}
+
+.business-analysis-list .card-title.active,
+.business-analysis-list .icon-right.active {
+  color: #fff;
+}
+
+.business-analysis-list li:hover * {
+  color: #fff;
+}
+
+.business-analysis-desc {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  flex-basis: 63%;
+}
+
+.business-analysis-desc li {
+  flex: 1 0 100%;
+  transition: all .3s;
+}
+
+.business-analysis-desc .card-title {
+  margin: 27px 0 15px;
+}
+
+.business-analysis-desc .section-para {
+  margin-bottom: 34px;
+  color: #777;
+  font-weight: 300;
+}
+
+/* business-analysis section styling ends here */
+
 /* services.html : client section styling ends here */
 
 /*=================================
