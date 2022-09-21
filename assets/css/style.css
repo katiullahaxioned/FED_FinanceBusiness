@@ -1543,3 +1543,125 @@ header { position: relative; }
   /* footer section styling ends here */
 
 }
+
+/*media query for max-width: 995px starts here*/
+@media only screen and (max-width: 995px) {
+
+  /* index.html : home-banner section styling starts here */
+
+  /* home-banner section styling starts here */
+
+  .home-banner .slider-content {
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  .banner-heading { font-size: 34px; }
+
+  /* home-banner section styling ends here */
+
+  /* business-growth section styling starts here */
+
+  .business-growth .wrapper {
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .business-growth-left {
+    align-items: center;
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .business-growth-counter {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .business-growth-counter li {
+    flex: 1 0 19%;
+  }
+  
+  /* business-growth section styling ends here */
+
+  /* our-company section styling starts here */
+
+  .our-company .wrapper {
+    flex-direction: column;
+  }
+
+  .our-company-right {
+    order: 1;
+    text-align: center;
+  }
+
+  .our-company-figure {
+    order: 2;
+  }
+
+  /* our-company section styling ends here */
+
+  /* about-us section styling starts here */
+
+  .about-us-testimonials {
+    flex-direction: column;
+  }
+
+  /* about-us section styling ends here */
+
+  /* index.html : home-banner section styling ends here */
+
+  /* services.html : client section styling starts here */
+
+  /* business-analysis section styling starts here */
+
+  .services-banner .wrapper {
+    height: 96vh;
+  }
+
+  .business-analysis .wrapper {
+    flex-direction: column;
+  }
+
+  .business-analysis-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  } 
+
+  .business-analysis-list li {
+    flex: 1 0 40%;
+  }
+
+  /* business-analysis section styling ends here */
+
+  /* services.html : client section styling ends here */
+
+  /* footer section styling starts here */
+
+  .footer-top .wrapper {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-top .wrapper > div {
+    border-bottom: none;
+    flex: 1 0 100%;
+  }
+
+  .footer-top .wrapper > div:not(:last-child) {
+    border-bottom: 2px solid #fff;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  /* footer section styling end here */
+
+}
