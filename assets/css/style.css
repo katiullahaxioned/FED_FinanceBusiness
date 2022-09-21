@@ -121,7 +121,7 @@ textarea {
 p { line-height: 2; }
 p::first-letter { text-transform: uppercase; }
 
-html.active { overflow: hidden; }
+html.overflow-hidden { overflow: hidden; }
 
 /* common styling starts here */
 
@@ -276,11 +276,13 @@ header { position: relative; }
   width: 100%;
   padding: 27px 4%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: absolute;
   z-index: 3;
   top: 100%;
+  left: 50%;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateX(-50%);
 }
 
 .header-bottom .logo {
@@ -328,9 +330,7 @@ header { position: relative; }
   transform: rotate(45deg);
 }
 
-.nav-hamburger .bar.active::before {
-  display: none;
-}
+.nav-hamburger .bar.active::before { display: none; }
 
 .nav-hamburger .bar.active::after {
   transform: translateY(-13px) rotate(-90deg);
@@ -573,7 +573,7 @@ header { position: relative; }
 }
 
 .modal-box {
-  width: 30%;
+  width: 35%;
   position: fixed;
   z-index: 10;
   top: 50%;
@@ -697,9 +697,7 @@ header { position: relative; }
   flex-direction: column;
 }
 
-.our-company-right .section-heading span:last-child {
-  display: inline;
-}
+.our-company-right .section-heading span:last-child { display: inline; }
 
 .our-company-right .section-para {
   color: #777;
@@ -904,9 +902,7 @@ header { position: relative; }
   position: relative;
 }
 
-.services-banner figure {
-  height: 100%;
-}
+.services-banner figure { height: 100%; }
 
 .services-banner img {
   height: 100%;
@@ -1012,9 +1008,7 @@ header { position: relative; }
   transition: all .3s;
 }
 
-.business-analysis-desc .card-title {
-  margin: 27px 0 15px;
-}
+.business-analysis-desc .card-title { margin: 27px 0 15px; }
 
 .business-analysis-desc .section-para {
   margin-bottom: 34px;
@@ -1024,22 +1018,15 @@ header { position: relative; }
 
 /* business-analysis section styling ends here */
 
-.servicesBody .call-back .wrapper {
-  padding: 153px 0 154px;
-}
+.servicesBody .call-back .wrapper { padding: 153px 0 154px; }
 
 .servicesBody .call-back textarea {
   min-height: 130px;
   padding: 15px 16px;
 }
 
-.servicesBody .call-back .section-sub-heading {
-  margin: 15px 0 84px;
-}
-
-.servicesBody .client .wrapper {
-  padding: 63px 9% 66px;
-}
+.servicesBody .call-back .section-sub-heading { margin: 15px 0 84px; }
+.servicesBody .client .wrapper { padding: 63px 9% 66px; }
 
 /* services.html : client section styling ends here */
 
@@ -1166,9 +1153,7 @@ header { position: relative; }
   resize: vertical;
 }
 
-.footer-callback .error-alert {
-  font-size: 10px;
-}
+.footer-callback .error-alert { font-size: 10px; }
 
 .footer-callback .input-control input {
   padding: 16px 31px;
@@ -1321,9 +1306,7 @@ header { position: relative; }
 
   /* home-banner section styling starts here */
 
-  .home-banner .wrapper {
-    height: 96vh;
-  }
+  .home-banner .wrapper { height: 96vh; }
 
   .home-banner .slider-content {
     width: 60%;
@@ -1361,13 +1344,8 @@ header { position: relative; }
     gap: 20px;
   } 
 
-  .services-card-content {
-    padding: 15px;
-  }
-
-  .services-card-content .section-para {
-    margin: 5px 0 10px;
-  }
+  .services-card-content { padding: 15px; }
+  .services-card-content .section-para { margin: 5px 0 10px; }
 
   /* financial-services section styling ends here */
 
@@ -1383,11 +1361,7 @@ header { position: relative; }
   }
 
   .business-growth-left .section-heading { margin: 8px 0; }
-
-  .business-growth-left .section-para {
-    margin: 12px 0;
-  }
-
+  .business-growth-left .section-para { margin: 12px 0; }
   .business-growth-left .more-button { margin-top: 12px; }
 
   .business-growth-counter {
@@ -1395,9 +1369,7 @@ header { position: relative; }
     gap: 20px;
   }
 
-  .business-growth-counter .counter-num {
-    font-size: 32px;
-  }
+  .business-growth-counter .counter-num { font-size: 32px; }
 
   /* business-growth section styling ends here */
 
@@ -1410,9 +1382,7 @@ header { position: relative; }
     justify-content: center;
   }
 
-  .our-company-right {
-    padding: 30px;
-  }
+  .our-company-right { padding: 30px; }
 
   .our-company .section-heading,
   .our-company .section-para {
@@ -1423,19 +1393,10 @@ header { position: relative; }
 
   /* about-us section styling starts here */
 
-  .about-us .wrapper {
-    padding: 100px 3%;
-  }
-
+  .about-us .wrapper { padding: 100px 3%; }
   .about-us .section-sub-heading { margin: 14px 0 50px; }
-
-  .about-us-testimonials {
-    gap: 25px;
-  }
-
-  .about-us-testimonials li {
-    padding: 20px;
-  }
+  .about-us-testimonials { gap: 25px; }
+  .about-us-testimonials li { padding: 20px; }
 
   /* about-us section styling ends here */
 
@@ -1446,13 +1407,8 @@ header { position: relative; }
     padding: 100px 3%;
   }
 
-  .call-back .section-sub-heading {
-    margin: 13px 0 50px;
-  }
-
-  .call-back form {
-    padding: 35px;
-  }
+  .call-back .section-sub-heading { margin: 13px 0 50px; }
+  .call-back form { padding: 35px; }
 
   .call-back .form-top {
     flex-wrap: wrap;
@@ -1468,9 +1424,7 @@ header { position: relative; }
     flex: 1 0 100%;
   }
 
-  .error-alert {
-    font-size: 12px;
-  }
+  .error-alert { font-size: 12px; }
 
   /* call-back section styling ends here */
 
@@ -1683,8 +1637,8 @@ header { position: relative; }
   header {
     position: sticky;
     z-index: 6;
-    left: 0;
     top: 0;
+    left: 0;
   }
 
   .header-top .wrapper {
@@ -1737,9 +1691,7 @@ header { position: relative; }
     justify-content: center;
   }
 
-  .header-social a {
-    color: #343434;
-  }
+  .header-social a { color: #343434; }
 
   /* header-top section styling ends here */
 
@@ -1801,6 +1753,15 @@ header { position: relative; }
 
   /* financial-services section styling ends here */
 
+    /* modal section styling starts here */
+  
+    .modal-box {
+      width: 60%;
+      text-align: center;
+    }
+  
+    /* modal section styling ends here */
+
   /* business-growth section styling starts here */
 
   .business-growth-counter {
@@ -1848,10 +1809,59 @@ header { position: relative; }
     flex-direction: column;
   }
 
-  .business-analysis-list li {
-    padding: 10px;
-  }
+  .business-analysis-list li { padding: 10px; }
 
   /* services.html : client section styling ends here */
+
+}
+
+/*media query for max-width: 540px starts here*/
+@media only screen and (max-width: 540px) {
+
+  header .logo { width: 190px; }
+
+  .header-time-contact { top: 58px; }
+  .home-banner .banner-heading { font-size: 25px; }
+
+  .section-heading,
+  .services-banner-content .banner-heading {
+    font-size: 28px;
+  }
+
+  .home-banner .card-title,
+  .callback-now .card-title,
+  .about-us-testimonials .card-title,
+  .footer-top .card-title,
+  .card-title {
+    font-size: 20px;
+  }
+
+  .about-us-testimonials .section-para,
+  .section-para,
+  .call-back .section-sub-heading,
+  .section-sub-heading,
+  .footer-bottom p,
+  .services-banner-content .section-para  {
+    font-size: 14px;
+  }
+
+  .call-back .section-sub-heading { word-spacing: 0; }
+
+  .services-card-content,
+  .our-company-right,
+  .about-us-testimonials li {
+    padding: 20px 5px;
+  }
+
+  .modal-box { width: 80%; }
+  .call-back form { padding: 10px 5px; }
+  .error-alert { font-size: 11px; }
+
+}
+
+/*media query for max-width: 320px starts here*/
+@media only screen and (max-width: 320px) {
+
+  .modal-box { width: 90%; }
 
 }
