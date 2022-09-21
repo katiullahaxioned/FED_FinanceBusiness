@@ -1322,7 +1322,7 @@ header { position: relative; }
   /* home-banner section styling starts here */
 
   .home-banner .wrapper {
-    height: 95vh;
+    height: 96vh;
   }
 
   .home-banner .slider-content {
@@ -1662,6 +1662,196 @@ header { position: relative; }
     justify-content: center;
   }
 
+  .error-alert { text-align: left; }
+
   /* footer section styling end here */
+
+}
+
+/*media query for max-width: 767px starts here*/
+@media only screen and (max-width: 767px) {
+
+  .section-heading,
+  .section-sub-heading {
+    text-align: center;
+  }
+
+  /* header section styling starts here */
+
+  /* header-top section styling starts here */
+
+  header {
+    position: sticky;
+    z-index: 6;
+    left: 0;
+    top: 0;
+  }
+
+  .header-top .wrapper {
+    flex-direction: column;
+  }
+
+  .header-time-contact {
+    position: absolute;
+    z-index: 2;
+    top: 66px;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+  }
+
+  .header-top a,
+  .header-time span {
+    padding: 5px;
+  }
+
+  .header-time span,
+  .header-contact a,
+  .header-social a {
+    border-left: none;
+  }
+
+  .header-contact a,
+  .header-social li:last-child a {
+    border-right: none;
+  }
+
+  .header-social {
+    position: fixed;
+    z-index: 2;
+    top: 20%;
+    right: 10px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header-social li {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    background-color: #a4c63a;
+    box-shadow: inset 0 0 5px #232323;
+    justify-content: center;
+  }
+
+  .header-social a {
+    color: #343434;
+  }
+
+  /* header-top section styling ends here */
+
+  /* header-bottom section styling starts here */
+
+  .header-bottom .wrapper {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 3px 10px #343434;
+  }
+
+  nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    left: -101%;
+    background-color: #343434;
+  }
+
+  nav.active { left: 0; }
+
+  .nav-menu {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .nav-hamburger {
+    display: block;
+    z-index: 8;
+  }
+
+  /* header-bottom section styling ends here */
+
+  /* header section styling ends here */
+
+  /* index.html : home-banner section styling starts here */
+
+  /* callback-now section styling starts here */
+
+  .callback-now .wrapper {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* callback-now section styling ends here */
+
+  /* financial-services section styling starts here */
+
+  .services-cards {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  /* financial-services section styling ends here */
+
+  /* business-growth section styling starts here */
+
+  .business-growth-counter {
+    flex-direction: column;
+  }
+
+  /* business-growth section styling ends here */
+
+  /* call-back section styling starts here */
+
+  .call-back form {
+    padding: 10px;
+    gap: 0;
+  }
+
+  .call-back .form-top {
+    gap: 0;
+  }
+
+  .call-back .form-top > * {
+    flex: 1 0 100%;
+  }
+
+  /* call-back section styling ends here */
+
+  /* client section styling starts here */
+
+  .client .logo-text-list {
+    flex-direction: column;
+    gap: 30px;
+  }
+    
+  /* client section styling ends here */
+
+  /* index.html : home-banner section styling ends here */
+
+  /* services.html : client section styling starts here */
+
+  .services-banner-content {
+    width: 100%;
+    top: 50%;
+  }
+
+  .business-analysis-list {
+    flex-direction: column;
+  }
+
+  .business-analysis-list li {
+    padding: 10px;
+  }
+
+  /* services.html : client section styling ends here */
 
 }
