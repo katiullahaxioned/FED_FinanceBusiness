@@ -155,9 +155,9 @@ html.overflow-hidden { overflow: hidden; }
   line-height: 1.1;
 }
 
+.section-heading span { display: inline; }
+.section-heading::first-letter { text-transform: uppercase;}
 .section-heading span:last-child { color: #a4c63a; }
-
-.section-heading span:first-child::first-letter { text-transform: uppercase; }
 
 .section-sub-heading {
   color: #777;
@@ -491,6 +491,7 @@ header { position: relative; }
 
 .banner-slider-control .control.inactive {
   opacity: 0;
+  pointer-events: none;
   visibility: hidden;
 }
 
