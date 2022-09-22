@@ -149,11 +149,117 @@ function tabFunction() {
 }
 // *** tab functionality : end *** //
 
+// *** main call-back section form validation : start *** //
+var callbackForm = document.callbackForm;
+var fullname = callbackForm.fullname;
+var email = callbackForm.email;
+var subject = callbackForm.subject;
+var youmessage = callbackForm.youmessage;
+var formSubmitAlert = document.querySelector('.call-back .form-submit-alert');
+
+var textRegEx = /^([a-zA-Z0-9][a-zA-Z0-9\s]+)$/;
+var fullnameRegEx = /^([a-zA-Z]+)\s([a-zA-Z]+)$/;
+var emailRegEx = /^([a-z][a-z0-9\-\_\.]+[a-z0-9])\@([a-z]{2,})\.([a-z]{2,})$/;
+
+function mainFormValidation() {
+  function formInputCheck(input, regExPattern, inputValue, errorAlert){
+    if(regExPattern.test(inputValue)) {
+      input.nextElementSibling.classList.remove('visibility');
+    } else {
+      input.value = '';
+      input.nextElementSibling.classList.add('visibility');
+      input.nextElementSibling.innerText = errorAlert;
+      return false;
+    }
+    return true;
+  }
+
+  callbackForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var fullnameValue = fullname.value;
+    var emailValue = email.value;
+    var subjectValue = subject.value;
+    var youmessageValue = youmessage.value;
+
+    var fullnameCheck = formInputCheck(fullname, fullnameRegEx, fullnameValue, "space seperated first & last name");
+    var emailCheck = formInputCheck(email, emailRegEx, emailValue, "enter valid email(abc@xyz.com)");
+    var subjectCheck = formInputCheck(subject, textRegEx, subjectValue, "must not be empty");
+    var youmessageCheck = formInputCheck(youmessage, textRegEx, youmessageValue, "must not be empty");
+
+    if (fullnameCheck && emailCheck && subjectCheck && youmessageCheck) {
+      formSubmitAlert.classList.add("active");
+      fullname.value = "";
+      email.value = "";
+      subject.value = "";
+      youmessage.value = "";
+
+      setTimeout(function () {
+        formSubmitAlert.classList.remove("active");
+      }, 2000);
+    } else {
+      formSubmitAlert.classList.remove("active");
+    }
+  });
+}
+// *** main call-back section form validation : end *** //
+
+// *** footer-callback section form validation : start *** //
+var footerCallbackForm = document.footerCallbackForm;
+var footerFullname = footerCallbackForm.fullname;
+var footerEmail = footerCallbackForm.email;
+var footerYoumessage = footerCallbackForm.youmessage;
+var footerFormSubmitAlert = document.querySelector('.footer-callback .form-submit-alert');
+
+function footerFormValidation() {
+  function footerFormInputCheck(input, regExPattern, inputValue, errorAlert){
+    if(regExPattern.test(inputValue)) {
+      input.nextElementSibling.classList.remove('visibility');
+    } else {
+      input.value = '';
+      input.nextElementSibling.classList.add('visibility');
+      input.nextElementSibling.innerText = errorAlert;
+      return false;
+    }
+    return true;
+  }
+
+  footerCallbackForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var fullnameValue = footerFullname.value;
+    var emailValue = footerEmail.value;
+    var youmessageValue = footerYoumessage.value;
+
+    var fullnameCheck = footerFormInputCheck(footerFullname, fullnameRegEx, fullnameValue, "space seperated first & last name");
+    var emailCheck = footerFormInputCheck(footerEmail, emailRegEx, emailValue, "enter valid email (name@prdxn.com)");
+    var youmessageCheck = footerFormInputCheck(footerYoumessage, textRegEx, youmessageValue, "must not be empty");
+
+    if (fullnameCheck && emailCheck && youmessageCheck) {
+      footerFormSubmitAlert.classList.add("active");
+      footerFullname.value = "";
+      footerEmail.value = "";
+      footerYoumessage.value = "";
+
+      setTimeout(function () {
+        footerFormSubmitAlert.classList.remove("active");
+      }, 2000);
+    } else {
+      footerFormSubmitAlert.classList.remove("active");
+    }
+  });
+}
+// *** footer-callback section form validation : end *** //
+
 // *********************** indexPageJS() end ************************** //
 function indexPageJS() {
   activeAnchor();
 
   modalFunction();
+
+  mainFormValidation();
+
+  footerFormValidation();
 
   menuHamburger.addEventListener("click", function () {
     navMenuHamburger();
@@ -213,6 +319,10 @@ function servicesPageJS() {
   activeAnchor();
 
   tabFunction();
+
+  mainFormValidation();
+
+  footerFormValidation();
 
   menuHamburger.addEventListener("click", function () {
     navMenuHamburger();
