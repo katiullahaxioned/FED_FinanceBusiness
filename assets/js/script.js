@@ -149,6 +149,20 @@ function tabFunction() {
 }
 // *** tab functionality : end *** //
 
+// *** common function to validate form inputs : start *** //
+function formInputCheck(input, regExPattern, inputValue, errorAlert){
+  if(regExPattern.test(inputValue)) {
+    input.nextElementSibling.classList.remove('visibility');
+  } else {
+    input.value = '';
+    input.nextElementSibling.classList.add('visibility');
+    input.nextElementSibling.innerText = errorAlert;
+    return false;
+  }
+  return true;
+}
+// *** common function to validate form inputs : end *** //
+
 // *** main call-back section form validation : start *** //
 var callbackForm = document.callbackForm;
 var fullname = callbackForm.fullname;
@@ -162,18 +176,6 @@ var fullnameRegEx = /^([a-zA-Z]+)\s([a-zA-Z]+)$/;
 var emailRegEx = /^([a-z][a-z0-9\-\_\.]+[a-z0-9])\@([a-z]{2,})\.([a-z]{2,})$/;
 
 function mainFormValidation() {
-  function formInputCheck(input, regExPattern, inputValue, errorAlert){
-    if(regExPattern.test(inputValue)) {
-      input.nextElementSibling.classList.remove('visibility');
-    } else {
-      input.value = '';
-      input.nextElementSibling.classList.add('visibility');
-      input.nextElementSibling.innerText = errorAlert;
-      return false;
-    }
-    return true;
-  }
-
   callbackForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -212,18 +214,6 @@ var footerYoumessage = footerCallbackForm.youmessage;
 var footerFormSubmitAlert = document.querySelector('.footer-callback .form-submit-alert');
 
 function footerFormValidation() {
-  function footerFormInputCheck(input, regExPattern, inputValue, errorAlert){
-    if(regExPattern.test(inputValue)) {
-      input.nextElementSibling.classList.remove('visibility');
-    } else {
-      input.value = '';
-      input.nextElementSibling.classList.add('visibility');
-      input.nextElementSibling.innerText = errorAlert;
-      return false;
-    }
-    return true;
-  }
-
   footerCallbackForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -231,9 +221,9 @@ function footerFormValidation() {
     var emailValue = footerEmail.value;
     var youmessageValue = footerYoumessage.value;
 
-    var fullnameCheck = footerFormInputCheck(footerFullname, fullnameRegEx, fullnameValue, "space seperated first & last name");
-    var emailCheck = footerFormInputCheck(footerEmail, emailRegEx, emailValue, "enter valid email (name@prdxn.com)");
-    var youmessageCheck = footerFormInputCheck(footerYoumessage, textRegEx, youmessageValue, "must not be empty");
+    var fullnameCheck = formInputCheck(footerFullname, fullnameRegEx, fullnameValue, "space seperated first & last name");
+    var emailCheck = formInputCheck(footerEmail, emailRegEx, emailValue, "enter valid email (name@prdxn.com)");
+    var youmessageCheck = formInputCheck(footerYoumessage, textRegEx, youmessageValue, "must not be empty");
 
     if (fullnameCheck && emailCheck && youmessageCheck) {
       footerFormSubmitAlert.classList.add("active");
